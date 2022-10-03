@@ -1,0 +1,27 @@
+!****************************************************
+!PROGRAM THAT COMPUTES THE FIRST NUMBER WITH A SQUARE
+!GREATER THAN A THRESHOLD
+!****************************************************
+
+IMPLICIT NONE
+INTEGER I
+REAL X, THRESHOLD
+
+WRITE(*, *) 'TYPE THE THRESHOLD:'
+READ(*, *) THRESHOLD
+
+DO
+	I = I + 1
+	X = I * I
+	IF (X <= THRESHOLD) THEN
+		CYCLE
+	ELSE
+		EXIT
+	ENDIF
+ENDDO
+
+WRITE(*, *) 'THE SQUARE OF', I, 'IS GREATER THAN THE THRESHOLD', THRESHOLD
+WRITE(*, *) 'THE SQUARE OF', I, 'IS EQUAL TO', X
+
+STOP
+END
